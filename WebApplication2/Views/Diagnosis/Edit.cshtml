@@ -1,0 +1,47 @@
+﻿@model WebApplication2.ViewModels.DiagnosisViewModel
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+
+@using (Html.BeginForm("Edit", "Diagnosis", FormMethod.Post))
+{
+    <div>
+        <label>Patient Name:</label>
+        @Html.DisplayFor(m => m.PatientName)
+    </div>
+    <div>
+        <label>Doctor Name:</label>
+        @Html.DisplayFor(m => m.DoctorName)
+    </div>
+    <div>
+        <label>Diagnosis</label>
+        @Html.TextBoxFor(m => m.Diagnosis)
+    </div>
+    <div>
+        <label>Drugs</label>
+        @Html.ListBoxFor(m => m.DrugIDs, new SelectList(ViewBag.Drugs, "DrugID", "DrugName"))
+    </div>
+    <div>
+        <label>Dosage</label>
+        @Html.TextBoxFor(m => m.Dosage)
+    </div>
+    <div>
+        <label>Frequency</label>
+        @Html.TextBoxFor(m => m.Frequency)
+    </div>
+    <div>
+        <label>Start Date</label>
+        @Html.TextBoxFor(m => m.StartDate, new { type = "date" })
+    </div>
+    <div>
+        <label>End Date</label>
+        @Html.TextBoxFor(m => m.EndDate, new { type = "date" })
+    </div>
+    <div>
+        <label>Notes</label>
+        @Html.TextAreaFor(m => m.Notes)
+    </div>
+    <button type="submit">Submit Diagnosis</button>
+}

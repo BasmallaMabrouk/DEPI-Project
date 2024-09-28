@@ -1,0 +1,58 @@
+﻿@model WebApplication2.Models.Doctor
+
+@{
+    ViewBag.Title = "Doctor Details";
+    Layout = "~/Views/Shared/_LayoutHeaderAndFooter.cshtml";
+}
+
+<h2>Doctor Details</h2>
+
+<div class="card mt-4">
+    <div class="card-header">
+        <h4>Doctor Information</h4>
+    </div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.DoctorName)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.DoctorName)
+            </dd>
+
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Specialization)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Specialization)
+            </dd>
+
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.PhoneNumber)
+            </dd>
+
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Department.DepartmentName)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Department.DepartmentName)
+            </dd>
+        </dl>
+    </div>
+    <div class="card-footer">
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.DoctorID }, new { @class = "btn btn-primary" }) |
+            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-secondary" })
+        </p>
+    </div>
+</div>

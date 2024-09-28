@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a682cc4a01894fb2a110a9dfa5c04f20" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="HospitalDEPIModel.Appointment" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalDEPIModel.Department" Width="1.5" PointX="1.5" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalDEPIModel.Doctor" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalDEPIModel.Drug" Width="1.5" PointX="3" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalDEPIModel.Patient" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalDEPIModel.Prescription" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalDEPIModel.sysdiagram" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <AssociationConnector Association="HospitalDEPIModel.FK__Appointme__Docto__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalDEPIModel.FK__Appointme__Patie__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalDEPIModel.FK__Prescript__Appoi__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalDEPIModel.FK__Doctor__Departme__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalDEPIModel.FK__Prescript__Docto__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalDEPIModel.FK__Prescript__DrugI__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalDEPIModel.FK__Prescript__Patie__45F365D3" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="HospitalDEPIModel.BookingsViewModel" Width="2.625" PointX="8.625" PointY="3.5" />
+        <AssociationConnector Association="HospitalDEPIModel.FK__BookingsV__Docto__619B8048" />
+        <AssociationConnector Association="HospitalDEPIModel.FK__BookingsV__Patie__60A75C0F" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

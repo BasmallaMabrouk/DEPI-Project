@@ -1,0 +1,43 @@
+﻿@model WebApplication2.Models.Drug
+
+@{
+    ViewBag.Title = "Drug Details";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h2 class="text-primary">Drug Details</h2>
+            <hr />
+
+            <div class="card">
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-4">@Html.DisplayNameFor(model => model.DrugName)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.DrugName)</dd>
+
+                        <dt class="col-sm-4">@Html.DisplayNameFor(model => model.DrugDescription)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.DrugDescription)</dd>
+
+                        <dt class="col-sm-4">@Html.DisplayNameFor(model => model.Price)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Price)</dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="mt-3">
+                <a href="@Url.Action("Edit", new { id = Model.DrugID })" class="btn btn-warning">
+                    <i class="fas fa-edit"></i> Edit
+                </a>
+                <a href="@Url.Action("Index")" class="btn btn-secondary ml-2">
+                    <i class="fas fa-arrow-left"></i> Back to List
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Include Bootstrap and FontAwesome if not already included -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
